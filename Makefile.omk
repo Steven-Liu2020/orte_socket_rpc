@@ -1,0 +1,14 @@
+ifeq ($(CONFIG_OC_ETH_ORTE_EXAMPLES),y)
+
+utils_PROGRAMS = server client1
+
+server_SOURCES = server.c
+
+client1_SOURCES = client1.c
+
+TARGET_LOADLIBES ?= pthread
+
+lib_LOADLIBES =  orte $(TARGET_LOADLIBES)
+
+endif #CONFIG_OC_ETH_ORTE_EXAMPLES
+
