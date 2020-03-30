@@ -286,7 +286,7 @@ void itoa(int n,char *str)
 		k=1;
 	else
 		k=0;
-	for(j=k;j<i/2;++j){
+	for(j=k;j<=(i-1)/2;++j){
 		tmp=str[j];
 		str[j]=str[i-j+k-1];
 		str[i-j+k-1]=tmp;

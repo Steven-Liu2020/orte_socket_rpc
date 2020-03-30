@@ -111,7 +111,7 @@ void rpc(int domain)
 		//ORTESleepMs(100);
 		ORTEPublicationSend(p);
 		s=subscriberCreate(d,topic);
-		while(!regfail); ORTESleepMs(100);
+		while(!regfail) ORTESleepMs(200);
 		ORTESubscriptionDestroy(s);
 		if(!strncmp(i2s,"exit",4)){
 			ORTEDomainAppDestroy(d);
